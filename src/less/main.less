@@ -1,0 +1,107 @@
+@primary-color: #2323da;
+@border-color: #777;
+@danger-color: #d50000;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f3f2f2;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding: 20px;
+}
+
+app-header, app-content, app-footer {
+  padding: 20px;
+  width: 100%;
+  display: block;
+  background-color: white;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 3px #aaa;
+}
+
+app-header {
+  .title {
+    font-size: 25px;
+    color: @primary-color;
+  }
+}
+
+app-content {
+
+  label {
+    font-size: 20px;
+    color: @primary-color;
+
+    &.error {
+      color: @danger-color;
+      display: block;
+      margin-top: 20px
+    }
+  }
+
+  input, button {
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    font-size: 18px;
+  }
+
+  input {
+    border-bottom: 1px solid @border-color;
+    margin: 20px 0;
+    transition: .2s;
+  }
+
+  input.ng-touched.ng-invalid {
+    border-bottom: 3px solid @danger-color;
+  }
+
+  button {
+    background: @primary-color;
+    color: white;
+    transition: .2s;
+  }
+
+  button:hover {
+    background: @primary-color + 11;
+  }
+
+  button:active {
+    background: @primary-color - 11;
+    font-size: 16px;
+  }
+
+  .weather-block {
+    margin-top: 30px;
+  }
+
+}
+
+.weather-block {
+  span {
+    display: inline-block;
+    line-height: 50px;
+    margin: 0;
+    float: left;
+    font-size: 20px;
+    color: #777;
+  }
+
+  img {
+    display: inline-block;
+    float: right;
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+app-footer {
+  .text-center {
+    text-align: center;
+  }
+}

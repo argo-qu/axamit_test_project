@@ -1,0 +1,5 @@
+<div class="weather-block" ng-if="vm.weather !== null && vm.weather !== undefined">
+    <span>{{vm.weather.description}}, {{vm.weather.temp}}° C</span>
+    <img ng-src="{{vm.weather.icon}}">
+    <div class="clearfix"></div>
+</div>

@@ -1,0 +1,13 @@
+<div class="content">
+
+    <form name="cityWeatherForm">
+        <label for="city">City</label>
+        <label class="error" ng-if="cityWeatherForm.city.$touched && cityWeatherForm.city.$error.required">Field is required</label>
+        <label class="error" ng-if="cityWeatherForm.city.$touched && !cityWeatherForm.city.$error.required && cityWeatherForm.city.$error.pattern_break">Field should contain 3 to 10 letters</label>
+        <input ng-required="true" id="city" name="city" type="text" ng-model="vm.city" placeholder="Enter city">
+        <button ng-click="vm.getWeather()">Get weather</button>
+    </form>
+
+    <app-weather-block weather="vm.weather"></app-weather-block>
+
+</div>
