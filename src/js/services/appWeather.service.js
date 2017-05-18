@@ -6,8 +6,8 @@
     function appWeatherService($http, $q, $interval, $timeout, $rootScope) {
         var self = this;
 
-        self.userWeatherInteval = 15000;
-        self.cityWeatherInteval = 15000;
+        self.userWeatherInteval = 1800000;
+        self.cityWeatherInteval = 1800000;
 
         self.getCurrentUserWeather = getCurrentUserWeather;
         self.getUserWeather = getUserWeather;
